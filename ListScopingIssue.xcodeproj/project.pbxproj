@@ -8,17 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		DB34658D2B816C62004FB570 /* ListScopingIssueApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB34658C2B816C62004FB570 /* ListScopingIssueApp.swift */; };
-		DB34658F2B816C62004FB570 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB34658E2B816C62004FB570 /* ContentView.swift */; };
 		DB3465912B816C64004FB570 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB3465902B816C64004FB570 /* Assets.xcassets */; };
 		DB3465942B816C64004FB570 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB3465932B816C64004FB570 /* Preview Assets.xcassets */; };
+		DB34659C2B816C8B004FB570 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = DB34659B2B816C8B004FB570 /* ComposableArchitecture */; };
+		DB34659F2B816D1E004FB570 /* SearchFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB34659E2B816D1D004FB570 /* SearchFeature.swift */; };
+		DB3465A12B816D28004FB570 /* Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3465A02B816D28004FB570 /* Row.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DB3465892B816C62004FB570 /* ListScopingIssue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListScopingIssue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB34658C2B816C62004FB570 /* ListScopingIssueApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListScopingIssueApp.swift; sourceTree = "<group>"; };
-		DB34658E2B816C62004FB570 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DB3465902B816C64004FB570 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB3465932B816C64004FB570 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DB34659E2B816D1D004FB570 /* SearchFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFeature.swift; sourceTree = "<group>"; };
+		DB3465A02B816D28004FB570 /* Row.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Row.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB34659C2B816C8B004FB570 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,7 +56,8 @@
 			isa = PBXGroup;
 			children = (
 				DB34658C2B816C62004FB570 /* ListScopingIssueApp.swift */,
-				DB34658E2B816C62004FB570 /* ContentView.swift */,
+				DB34659E2B816D1D004FB570 /* SearchFeature.swift */,
+				DB3465A02B816D28004FB570 /* Row.swift */,
 				DB3465902B816C64004FB570 /* Assets.xcassets */,
 				DB3465922B816C64004FB570 /* Preview Content */,
 			);
@@ -83,6 +88,9 @@
 			dependencies = (
 			);
 			name = ListScopingIssue;
+			packageProductDependencies = (
+				DB34659B2B816C8B004FB570 /* ComposableArchitecture */,
+			);
 			productName = ListScopingIssue;
 			productReference = DB3465892B816C62004FB570 /* ListScopingIssue.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +119,9 @@
 				Base,
 			);
 			mainGroup = DB3465802B816C62004FB570;
+			packageReferences = (
+				DB34659A2B816C8B004FB570 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = DB34658A2B816C62004FB570 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,7 +148,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB34658F2B816C62004FB570 /* ContentView.swift in Sources */,
+				DB3465A12B816D28004FB570 /* Row.swift in Sources */,
+				DB34659F2B816D1E004FB570 /* SearchFeature.swift in Sources */,
 				DB34658D2B816C62004FB570 /* ListScopingIssueApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,6 +356,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DB34659A2B816C8B004FB570 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.8.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DB34659B2B816C8B004FB570 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DB34659A2B816C8B004FB570 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DB3465812B816C62004FB570 /* Project object */;
 }
